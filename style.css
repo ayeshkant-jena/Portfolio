@@ -251,12 +251,13 @@ span{
 
 .portfolio-box img{
     width: 100%;
+    height: 250px;
     transition: .5s ease;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .portfolio-box:hover img{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .portfolio-box .portfolio-layer{
@@ -303,6 +304,86 @@ span{
     font-size: 2rem;
     color: var(--snd-bg-color);
 }
+
+.skills h2{
+    margin-bottom: 5rem;
+}
+
+.skills-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.skills-box{
+    flex: 1 1 30rem;
+    background: var(--snd-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .3rem solid var(--bg-color);
+    transition: .5s ease;
+}
+
+.experience{
+    background: var(--snd-bg-color);
+}
+
+.skill-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  gap: 1.5rem;
+}
+
+.skill-label {
+  flex: 0 0 100px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.bar {
+  position: relative;
+  flex: 1;
+  height: 1rem;
+  background: #2e3551;
+  border-radius: 1rem;
+  overflow: visible; /* changed from hidden */
+  cursor: pointer;
+}
+
+.fill {
+  height: 100%;
+  width: 0%;
+  background: var(--main-color);
+  border-radius: 1rem;
+  transition: width 0.6s ease;
+}
+
+.tooltip {
+  position: absolute;
+  top: -2.5rem;
+  right: 0.5rem;
+  background: var(--main-color);
+  color: var(--snd-bg-color);
+  padding: 0.4rem 0.9rem;
+  border-radius: 0.6rem;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.bar:hover .tooltip {
+  opacity: 1;
+}
+
 
 .contact h2{
     margin-bottom: 3rem;
